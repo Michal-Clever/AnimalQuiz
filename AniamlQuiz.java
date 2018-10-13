@@ -9,8 +9,7 @@ public class AniamlQuiz {
         String[] words = {"małpa", "koń", "ryba", "tygrys", "słoń", "papuga", "kot", "pies"};
         Scanner scanner = new Scanner(System.in);
         Random random = new Random();
-
-
+        
         int fails = 0;
         int round = 0;
         String response;
