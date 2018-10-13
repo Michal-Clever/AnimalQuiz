@@ -4,45 +4,45 @@ import java.util.Scanner;
 public class AniamlQuiz {
 
 
-        public static void main(String[] args) {
+    public static void main(String[] args) {
 
-            String[] words = {"małpa", "koń", "ryba", "tygrys", "słoń", "papuga","kot","pies"};
-            Scanner scanner = new Scanner(System.in);
-            Random random = new Random();
+        String[] words = {"małpa", "koń", "ryba", "tygrys", "słoń", "papuga", "kot", "pies"};
+        Scanner scanner = new Scanner(System.in);
+        Random random = new Random();
 
 
-            int fails = 0;
-            int round = 0;
-            String response;
-            while (fails <= 2) {
+        int fails = 0;
+        int round = 0;
+        String response;
+        while (fails <= 2) {
 
-                String word = words[random.nextInt(words.length)];
-                String hashWord = word;
+            String word = words[random.nextInt(words.length)];
+            String hashWord = word;
 
-                for (int i = 0; i < round; i += 5) {
-                    char randomChar = hashWord.charAt(random.nextInt(hashWord.length()));
-                    if (randomChar == '*') {
-                        i--;
-                        continue;
-                    }
-                    hashWord = hashWord.replaceFirst(String.valueOf(randomChar), "*");
+            for (int i = 0; i < round; i += 5) {
+                char randomChar = hashWord.charAt(random.nextInt(hashWord.length()));
+                if (randomChar == '*') {
+                    i--;
+                    continue;
                 }
-                System.out.println("Twoje wylosowane zwierzę: " + hashWord);
-                System.out.print("Podaj zwierzę: ");
-                response = scanner.nextLine();
-
-                if (word.equalsIgnoreCase(response)) {
-                    System.out.println("Gratuluje! Zdobywasz punkt");
-                    round++;
-                } else {
-                    System.out.println("Nie udało się odgadnac");
-                    fails++;
-                }
-
-                // write your code here
+                hashWord = hashWord.replaceFirst(String.valueOf(randomChar), "*");
             }
-            System.out.println("Koniec gry!!! Twoje punkty to :" + (round));
+            System.out.println("Twoje wylosowane zwierzę: " + hashWord);
+            System.out.print("Podaj zwierzę: ");
+            response = scanner.nextLine();
+
+            if (word.equalsIgnoreCase(response)) {
+                System.out.println("Gratuluje! Zdobywasz punkt");
+                round++;
+            } else {
+                System.out.println("Nie udało się odgadnac");
+                fails++;
+            }
+
+            // write your code here
         }
+        System.out.println("Koniec gry!!! Twoje punkty to :" + (round));
     }
+}
 
 
