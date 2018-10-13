@@ -2,8 +2,6 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class AniamlQuiz {
-
-
     public static void main(String[] args) {
 
         String[] words = {"małpa", "koń", "ryba", "tygrys", "słoń", "papuga", "kot", "pies","pająk"};
