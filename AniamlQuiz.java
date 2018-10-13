@@ -6,7 +6,7 @@ public class AniamlQuiz {
 
         public static void main(String[] args) {
 
-            String[] words = {"małpa", "koń", "ryba", "tygrys", "słoń", "papuga"};
+            String[] words = {"małpa", "koń", "ryba", "tygrys", "słoń", "papuga","kot","pies"};
             Scanner scanner = new Scanner(System.in);
             Random random = new Random();
 
