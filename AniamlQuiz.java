@@ -38,8 +38,6 @@ public class AniamlQuiz {
                 System.out.println("Nie udało się odgadnac");
                 fails++;
             }
-
-            // write your code here
         }
         System.out.println("Koniec gry!!! Twoje punkty to :" + (round));
     }
